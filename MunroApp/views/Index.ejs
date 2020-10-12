@@ -1,0 +1,24 @@
+<% if (munroData) { %>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>DoBIH Number</th>
+      <th>Grid Ref</th>
+      <th>Height (ft)</th>
+      <th>Category(1997)</th>
+    </tr>
+  </thead>
+  <tbody>
+  <% munroData.forEach(function(obj){ %>
+    <tr> 
+      <td><%= obj.Name %></td>
+      <td><%= obj["DoBIH Number"] %></td>
+      <td><%= obj["Grid Ref"] %></td>
+      <td><%= obj["Height (ft)"] %></td>
+      <td><%= obj[1997] %></td>
+    </tr>
+  <% }); %>
+  </tbody>
+</table>
+<% } %>
